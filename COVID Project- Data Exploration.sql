@@ -20,6 +20,12 @@ where location like '%norway%'
 order by 1,2 
 
 
+--Total cases vs new deaths
+Select Location, date, total_cases, new_deaths,(new_deaths/total_cases)*100 as Deathpercentage
+From abc ..CovidDeaths
+where location like '%norway%'
+order by 1,2 
+
 
 -- Total Cases vs Population
 Select Location, date, Population,total_cases,(total_cases/population)*100 as Deathpercentage
